@@ -1,3 +1,6 @@
 module.exports = {
-  extends: 'starterkit-webpack',
-}
+  extends: 'airbnb-base',
+  env: {
+    browser: true,
+  },
+};

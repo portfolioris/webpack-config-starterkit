@@ -5,7 +5,7 @@ const path = require('path');
 const config = require('./config');
 
 module.exports = {
-  mode: 'development',
+  // mode: 'development',
   // mode: 'production',
   devtool: 'source-map',
   // entry: {
@@ -13,11 +13,11 @@ module.exports = {
     // style: `${config.paths.assets.css}style.scss`,
     // main: `${config.paths.assets.js}entry.js`,
   // },
-  output: {
-    path: path.join(__dirname, config.paths.public.assets),
-    publicPath: '',
-    // assetModuleFilename: 'assets/[name][ext][query]'
-  },
+  // output: {
+  //   path: path.join(__dirname, config.paths.public.assets),
+  //   publicPath: '',
+  //   // assetModuleFilename: 'assets/[name][ext][query]'
+  // },
   devServer: {
     contentBase: path.join(__dirname, `../${config.paths.public.root}`),
     watchContentBase: true,
@@ -29,18 +29,9 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // or 'style-loader',
-          // 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          // {
-          //   loader: 'postcss-loader',
-          //   options: {
-          //     postcssOptions: {
-          //       config: path.resolve(__dirname, 'postcss.config.js'),
-          //     },
-          //   },
-          // },
           'sass-loader',
         ],
       },
