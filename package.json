@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
+    "@supple-kit/stylelint-config-supple": "^3.0.4",
     "css-loader": "^5.0.1",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -24,7 +25,8 @@
     "stylelint": "^13.9.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "webpack": "^5.19.0",
-    "webpack-cli": "^4.4.0"
+    "webpack-cli": "^4.4.0",
+    "webpack-merge": "^5.7.3"
   },
   "devDependencies": {}
 }
