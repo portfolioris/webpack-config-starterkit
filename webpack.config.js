@@ -1,25 +1,12 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
-const path = require('path');
-const config = require('./config');
+// const path = require('path');
 
 module.exports = {
-  // mode: 'development',
-  // mode: 'production',
   devtool: 'source-map',
-  // entry: {
-    // pl: `${config.paths.assets.css}pattern-scaffolding.scss`,
-    // style: `${config.paths.assets.css}style.scss`,
-    // main: `${config.paths.assets.js}entry.js`,
-  // },
-  // output: {
-  //   path: path.join(__dirname, config.paths.public.assets),
-  //   publicPath: '',
-  //   // assetModuleFilename: 'assets/[name][ext][query]'
-  // },
   devServer: {
-    contentBase: path.join(__dirname, `../${config.paths.public.root}`),
+    // contentBase: path.join(__dirname, `../${config.paths.public.root}`),
     watchContentBase: true,
     writeToDisk: true,
     host: '0.0.0.0',
@@ -45,7 +32,7 @@ module.exports = {
     new ESLintPlugin(),
     new MiniCssExtractPlugin(),
     new StylelintWebpackPlugin({
-      context: 'src',
+      files: '**/*.scss',
     }),
   ],
 };

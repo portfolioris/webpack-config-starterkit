@@ -2,7 +2,8 @@
     Sass test partial
     ========================================================================= */
 
-$htmlBgColor: #bada55;
+// #rrggbbaa hex color notation, tests for postcss
+$htmlBgColor: #bada5555;
 
 html {
   background-color: $htmlBgColor;
