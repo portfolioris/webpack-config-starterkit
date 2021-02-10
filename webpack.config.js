@@ -1,7 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
-// const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
