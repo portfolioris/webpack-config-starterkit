@@ -1,7 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
-const SassLoader = require('sass-loader');
 
 module.exports = {
   devtool: 'source-map',
@@ -19,8 +18,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          // 'sass-loader',
-          SassLoader,
+          './node_modules/sass-loader',
         ],
       },
       {
