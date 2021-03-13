@@ -18,7 +18,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          './node_modules/sass-loader',
+          'sass-loader',
         ],
       },
       {
