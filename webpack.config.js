@@ -2,6 +2,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
 const PostCSS = require('postcss');
+const Sass = require('sass');
 const path = require('path');
 
 module.exports = {
@@ -31,10 +32,10 @@ module.exports = {
           },
           {
             loader: path.resolve('node_modules/sass-loader'),
+            options: {
+              implementation: Sass,
+            },
           },
-          // 'css-loader',
-          // 'postcss-loader',
-          // 'sass-loader',
         ],
       },
       {
